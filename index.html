@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARVEL API</title>
+    <link rel = "stylesheet" href = "styles.css">
+    <script src="https://kit.fontawesome.com/05de3978bc.js" crossorigin="anonymous"></script>    
+</head>
+<body>
+    <header>
+
+        <!-- Search bar-->
+        <input id="search-input" placeholder="Search your Character">
+        <button class = "center" id="search-button">Button</button>
+        
+    </header>
+    <main>
+        <!--Main Container-->
+        <div id = "main-container">Main Container will go here</div>
+
+        <!--Selected character container-->
+        <div class = "container column center" id = "selected-character-container">
+            <img id="current-character" src="/assets/X_symbol_from_X-Men_logo.svg.png" width="400">
+
+            <!--Selected Character Info-->
+            <div class = "hide" id="selected-character-info">
+                <!--name-->
+                <h2 id="selected-character-name">Character Name</h2>
+
+                <!--hero or villain-->
+                <h3>Hero or Villain</h3>
+
+                <!--description-->
+                <p id="selected-character-description">Selected Character Description</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!--Data provided by Marvel, etc.-->
+    </footer>
+    <script src = "script.js"></script>
+</body>
+</html>

@@ -35,6 +35,12 @@ h1, h2, h3, h4 {
 header {
     margin: auto;
 }
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
 .column {
     display: flex;
     flex-direction: column;
@@ -90,14 +96,23 @@ input {
 /*MAIN CONTAINER*/
 
 #main-container {
+    
+    overflow: scroll;
     display: flex;
     flex-flow: wrap row;
     justify-content: center;
+    margin-right: 340px;
+
+}
+
+#main-container::-webkit-scrollbar {
+    display:none;
 }
 
 #character-container {
     flex: 0.5;
     min-width: 20%;
+    height: 200px;
     margin: 10px;
     margin-top: 60px;
     padding-top: 40px;
@@ -109,4 +124,26 @@ input {
 
 #character-container:hover{
     border: 2px solid #e0e0e0;
+}
+
+#character-container:hover .character-image{
+    transform: scale(1.12);
+}
+
+.character-image img {
+    position: relative;
+    top: -50px;
+    border-radius: 16px;    
+}
+
+/* SELECTED CHARACTER CONTAINER */
+
+#selected-character-container {
+    
+    width: 300px;
+    margin: 10px;
+    height: 80vh;
+    position: fixed;
+    float: right;
+    right: calc(10vw - 20px);
 }

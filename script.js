@@ -24,18 +24,26 @@ function getData(){
                 let characterImg = imgPath+"/"+imgVariant+"."+imgExtension;
 
                 // create each character's div
+                let div = document.createElement('div');
+                div.innerHTML = `
+                    <div class = "character-image">
+                        <img src = "${characterImg}" alt = "${characterName}">
+                    </div>
+                    <div class = "character-name">
+                        <h3>${characterName}</h3>
+                    </div>
+                `;
+
+                // append to mainContainer
+                mainContainer.appendChild(div);
+
                 
-                console.log(characterImg);
-            })
+                
+            });
 
         })
         .catch(error => console.log(error))
 };
 getData();
 
-//fetch character's image
-
-//fetch character name
-
-//fetch character's description
 

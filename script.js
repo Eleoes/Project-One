@@ -1,3 +1,5 @@
+
+
 const apiKey = "e00b87711d2f93def3b684538f72e256";
 const url = "https://gateway.marvel.com:443/v1/public/events/227/characters?orderBy=name&limit=91&apikey="+apiKey;
 
@@ -25,8 +27,10 @@ function getData(){
 
                 // create each character's div
                 let div = document.createElement('div');
+                div.setAttribute('id', 'character-container');
+                div.setAttribute('class', 'container');
                 div.innerHTML = `
-                    <div class = "character-image">
+                    <div class = "character-image center">
                         <img src = "${characterImg}" alt = "${characterName}">
                     </div>
                     <div class = "character-name">

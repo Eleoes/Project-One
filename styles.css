@@ -132,7 +132,7 @@ input {
 
 .character-image img {
     position: relative;
-    top: -50px;
+    top: -10px;
     border-radius: 16px;    
 }
 
@@ -141,7 +141,7 @@ input {
 #selected-character-container {
     
     width: 300px;
-    margin: 10px;
+    margin-top: 10px;
     height: 80vh;
     position: fixed;
     float: right;

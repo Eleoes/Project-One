@@ -3,6 +3,11 @@
 const apiKey = "e00b87711d2f93def3b684538f72e256";
 const url = "https://gateway.marvel.com:443/v1/public/events/227/characters?orderBy=name&limit=91&apikey="+apiKey;
 
+// GLOBAL VARIABLES
+let currentList = [];
+let mainContainer = document.querySelector('#main-container');
+
+
 //GET DATA
 function getData(){
     
@@ -12,9 +17,9 @@ function getData(){
         .then(res =>{
 
             let characters = res.data.results;
-            let mainContainer = document.querySelector('#main-container');
+            currentList.push(characters);
             
-            characters.forEach(character =>{
+            characters.forEach((character,index) =>{
 
                 // fetch character's name
                 let characterName = character.name;
@@ -27,7 +32,7 @@ function getData(){
 
                 // create each character's div
                 let div = document.createElement('div');
-                div.setAttribute('id', 'character-container');
+                div.setAttribute('id', `character-container-${index}`);
                 div.setAttribute('class', 'container');
                 div.innerHTML = `
                     <div class = "character-image center">
@@ -50,4 +55,38 @@ function getData(){
 };
 getData();
 
+/* SEARCH BAR */
+let searchInput = document.querySelector('#search-input');
+searchInput.addEventListener("onkeydown", function(event){
+    filterList(event.target.value);
+});
+
+
+// searchInput.addEventListener("input", () => {
+//     setTimeout(function (){
+//         let searchResults = [];
+//         let characters = mainContainer;
+//         console.log(characters);
+//         // for (let i=0; i < characters.length; i++) {
+//         //     if(characters[i].name){
+//         //         if(characters[i].name.replaceAll('-', ' ').includes(document.getElementById('search-input').value.toLowerCase())){
+//         //             searchResults.push(characters[i]);
+//         //         };
+//         //     };
+//         // };
+
+//         // document.getElementById('main-container').innerHTML = '';
+//         // currentList = searchResults;
+//         // updateCharacterList();
+//     }, 1);
+
+// });
+
+// // function updateCharacterList(index) {
+// //     if(currentList[index]) {
+// //         mainContainer.insertAdjacentElement('beforeend', `<div class = "container center column" id = "character-container">`);
+            
+        
+// //     }
+// // }
 

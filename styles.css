@@ -109,7 +109,7 @@ input {
     display:none;
 }
 
-#character-container {
+.character-container {
     flex: 0.5;
     min-width: 20%;
     height: 200px;
@@ -122,11 +122,11 @@ input {
     transition-duration: 100ms;
 }
 
-#character-container:hover{
+.character-container:hover{
     border: 2px solid #e0e0e0;
 }
 
-#character-container:hover .character-image{
+.character-container:hover .character-image{
     transform: scale(1.12);
 }
 

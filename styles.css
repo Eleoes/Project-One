@@ -32,9 +32,7 @@ h1, h2, h3, h4 {
     margin: 5px;
     text-align: center;
 }
-header {
-    margin: auto;
-}
+
 
 main {
     display: flex;
@@ -67,14 +65,16 @@ main {
 /* SEARCH BAR */
 
 #search-bar-container {
-    margin: 30px 10px;
+    width: 785px;
+    margin-left: 10px;
+    margin-top: 30px;
 }
 
 input {
     border: none;
     outline: none;
     font-size: 18px;
-    flex: 1
+    flex: 1;
 }
 
 #search-button {
@@ -130,10 +130,13 @@ input {
     transform: scale(1.12);
 }
 
-.character-image img {
+.character-image {
     position: relative;
     top: -10px;
-    border-radius: 16px;    
+    border-radius: 16px;
+    width: 150px;
+    height:150px;  
+    margin: auto;
 }
 
 /* SELECTED CHARACTER CONTAINER */
@@ -141,9 +144,36 @@ input {
 #selected-character-container {
     
     width: 300px;
-    margin-top: 10px;
-    height: 80vh;
+    margin-top: 60px;
+    height: 70vh;
     position: fixed;
     float: right;
     right: calc(10vw - 20px);
+}
+
+#selected-character-container img {
+    transform: scale(2.5);
+    border-radius: 16px;
+    position: absolute;
+    top: 100px;
+}
+
+
+
+/* SELECTED CHARACTER INFO */
+
+#selected-character-info {
+    margin-top: 100px;
+}
+
+#selected-character-name {
+    margin-bottom: 30px;
+}
+
+#selected-character-events {
+    margin-bottom: 20px;
+}
+#selected-character-container ul {
+    text-align: center;
+    list-style-type: none;
 }

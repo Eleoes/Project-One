@@ -64,13 +64,13 @@ function displayCharacters(results){
         // create each character's div
         let div = document.createElement('div');
         // div.setAttribute('id', `character-container-${index}`); NOT NEEDED...YET
-        div.setAttribute('class', 'character-container container');  
+        div.setAttribute('class', 'character-container container center column');  
         
         
         
         div.innerHTML = `
             
-                <img class = "character-image center" src = "${characterImg}" alt = "${characterName}" 
+                <img class = "character-image" src = "${characterImg}" alt = "${characterName}" 
                 data-name = "${characterName}" 
                 data-comics = "${randomComics}"
                 data-events = "${randomEvents}"

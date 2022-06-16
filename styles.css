@@ -20,8 +20,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url();
+    background-image: url(/assets/X_symbol.png);
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-position-x: -180px;
     background-position-y: -80px;
     width: 100%
@@ -65,9 +66,8 @@ main {
 /* SEARCH BAR */
 
 #search-bar-container {
-    width: 785px;
-    margin-left: 10px;
-    margin-top: 30px;
+    margin: 30px 10px;
+    
 }
 
 input {
@@ -112,10 +112,11 @@ input {
 .character-container {
     flex: 0.5;
     min-width: 20%;
-    height: 200px;
+    /* height: 200px; */
     margin: 10px;
     margin-top: 60px;
     padding-top: 40px;
+    min-width: 200px;
     position: relative;
     cursor: pointer;
     border: 2px solid white;
@@ -134,9 +135,7 @@ input {
     position: relative;
     top: -10px;
     border-radius: 16px;
-    width: 150px;
-    height:150px;  
-    margin: auto;
+    max-height: 150px;
 }
 
 /* SELECTED CHARACTER CONTAINER */
@@ -163,7 +162,7 @@ input {
 /* SELECTED CHARACTER INFO */
 
 #selected-character-info {
-    margin-top: 100px;
+    margin-top: 250px;
 }
 
 #selected-character-name {
@@ -176,4 +175,39 @@ input {
 #selected-character-container ul {
     text-align: center;
     list-style-type: none;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 1100px) {
+    
+    body {
+        padding: 0 5vw;
+    }
+    
+    #main-container {
+        margin: 0;
+    }
+    
+
+}
+
+@media(min-width: 1100px){
+    #selected-character-container {
+        display: flex !important;
+    }
+
+    #search-bar-container {
+        margin-right: 350px;
+    }
+}
+
+@media(max-width: 380px) {
+    body {
+        width: 90%;
+    }
+
+    #search-bar-container {
+        margin: 40px 0;
+    }
 }
